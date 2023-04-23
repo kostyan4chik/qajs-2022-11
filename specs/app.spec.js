@@ -1,5 +1,6 @@
 import { nameIsValid, fullTrim, getTotal } from '../src/app.js'
 
+
 test('imports without error', () => {
     expect(nameIsValid).toBeDefined();
 })
@@ -12,19 +13,21 @@ test('nameIsValid :пустое значение == false', () => {
 test('nameIsValid : больше двух символов = true', () => {
     expect(nameIsValid('nikita')).toBe(true)
 })
-test('string', () => {
-    expect(fullTrim).toBeDefined()
-})
+
+
+
 test('number', () => {
     expect(fullTrim).toBeDefined()
 })
-test('писька сасать', () => {
+test('проверка ошибки при данных без пробела', () => {
     expect(fullTrim('писькасасать')).toBeDefined()
 })
 
-test('писькасасать', () => {
+test('проверка удаления пробела из середины строки', () => {
     expect(fullTrim('писька сасать')).toBe('писькасасать')
 })
+
+
 test('discount !== string', () => {
     expect(getTotal).toBeDefined()
 })
